@@ -1,0 +1,339 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+
+<https://example.org/doc1#char=0,347>
+        a nif:String , nif:Context  , nif:RFC5147String ;
+        nif:isString """In an interview with Martin Bashir for the 2003 documentary Living with Michael Jackson, the King of Pop recalled that Joe often sat with a white belt at hand as he and his four siblings rehearsed. Russian daily Kommersant reports that Moscow will supply the Greeks with gas at rock bottom prices as Tsipras prepares to meet the Russian President."""^^xsd:string ;
+        nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex "347"^^xsd:nonNegativeInteger ;
+        nif:sourceUrl <https://example.org/doc1> .
+
+<https://example.org/doc1#char=0,197>
+        a nif:String , nif:Context , nif:RFC5147String ;
+        nif:isString """In an interview with Martin Bashir for the 2003 documentary Living with Michael Jackson, the King of Pop recalled that Joe often sat with a white belt at hand as he and his four siblings rehearsed."""^^xsd:string ;
+        nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex "197"^^xsd:nonNegativeInteger ;
+        nif:broaderContext <https://example.org/doc1#char=0,347> .
+
+<https://example.org/doc1#char=6,15>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """interview"""^^xsd:string ;
+        nif:beginIndex "6"^^xsd:nonNegativeInteger ;
+        nif:endIndex "15"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Interview> .
+
+<https://example.org/doc1#char=21,34>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Martin Bashir"""^^xsd:string ;
+        nif:beginIndex "21"^^xsd:nonNegativeInteger ;
+        nif:endIndex "34"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Martin_Bashir> .
+
+<https://example.org/doc1#char=43,47>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """2003"""^^xsd:string ;
+        nif:beginIndex "43"^^xsd:nonNegativeInteger ;
+        nif:endIndex "47"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/2003> .
+
+<https://example.org/doc1#char=48,59>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """documentary"""^^xsd:string ;
+        nif:beginIndex "48"^^xsd:nonNegativeInteger ;
+        nif:endIndex "59"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Television_documentary> .
+
+<https://example.org/doc1#char=60,87>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Living with Michael Jackson"""^^xsd:string ;
+        nif:beginIndex "60"^^xsd:nonNegativeInteger ;
+        nif:endIndex "87"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Living_with_Michael_Jackson> .
+
+<https://example.org/doc1#char=72,87>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Michael Jackson"""^^xsd:string ;
+        nif:beginIndex "72"^^xsd:nonNegativeInteger ;
+        nif:endIndex "87"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Michael_Jackson> .
+
+<https://example.org/doc1#char=93,97>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """King"""^^xsd:string ;
+        nif:beginIndex "93"^^xsd:nonNegativeInteger ;
+        nif:endIndex "97"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/King> .
+
+<https://example.org/doc1#char=93,104>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """King of Pop"""^^xsd:string ;
+        nif:beginIndex "93"^^xsd:nonNegativeInteger ;
+        nif:endIndex "104"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Michael_Jackson> .
+
+<https://example.org/doc1#char=105,113>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """recalled"""^^xsd:string ;
+        nif:beginIndex "105"^^xsd:nonNegativeInteger ;
+        nif:endIndex "113"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Recall_(memory)> .
+
+<https://example.org/doc1#char=119,122>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Joe"""^^xsd:string ;
+        nif:beginIndex "119"^^xsd:nonNegativeInteger ;
+        nif:endIndex "122"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Joe_Jackson_(manager)> .
+
+<https://example.org/doc1#char=129,132>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """sat"""^^xsd:string ;
+        nif:beginIndex "129"^^xsd:nonNegativeInteger ;
+        nif:endIndex "132"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Sitting> .
+
+<https://example.org/doc1#char=140,145>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """white"""^^xsd:string ;
+        nif:beginIndex "140"^^xsd:nonNegativeInteger ;
+        nif:endIndex "145"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/White> .
+
+<https://example.org/doc1#char=146,150>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """belt"""^^xsd:string ;
+        nif:beginIndex "146"^^xsd:nonNegativeInteger ;
+        nif:endIndex "150"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Belt_(clothing)> .
+
+<https://example.org/doc1#char=154,158>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """hand"""^^xsd:string ;
+        nif:beginIndex "154"^^xsd:nonNegativeInteger ;
+        nif:endIndex "158"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Hand> .
+
+<https://example.org/doc1#char=162,164>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """he"""^^xsd:string ;
+        nif:beginIndex "162"^^xsd:nonNegativeInteger ;
+        nif:endIndex "164"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Michael_Jackson> .
+
+<https://example.org/doc1#char=162,186>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """he and his four siblings"""^^xsd:string ;
+        nif:beginIndex "162"^^xsd:nonNegativeInteger ;
+        nif:endIndex "186"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/The_Jackson_5> .
+
+<https://example.org/doc1#char=173,177>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """four"""^^xsd:string ;
+        nif:beginIndex "173"^^xsd:nonNegativeInteger ;
+        nif:endIndex "177"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/4> .
+
+<https://example.org/doc1#char=178,186>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """siblings"""^^xsd:string ;
+        nif:beginIndex "178"^^xsd:nonNegativeInteger ;
+        nif:endIndex "186"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Sibling> .
+
+<https://example.org/doc1#char=187,196>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=0,197> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """rehearsed"""^^xsd:string ;
+        nif:beginIndex "187"^^xsd:nonNegativeInteger ;
+        nif:endIndex "196"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Rehearsal> .
+
+<https://example.org/doc1#char=198,347>
+        a nif:String , nif:Context , nif:RFC5147String ;
+        nif:isString """Russian daily Kommersant reports that Moscow will supply the Greeks with gas at rock bottom prices as Tsipras prepares to meet the Russian President."""^^xsd:string ;
+        nif:beginIndex "198"^^xsd:nonNegativeInteger ;
+        nif:endIndex "347"^^xsd:nonNegativeInteger ;
+        nif:broaderContext <https://example.org/doc1#char=0,347> .
+
+<https://example.org/doc1#char=0,7>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Russian"""^^xsd:string ;
+        nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex "7"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Russia> ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Russians> .
+
+<https://example.org/doc1#char=8,13>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """daily"""^^xsd:string ;
+        nif:beginIndex "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex "13"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Newspaper> .
+
+<https://example.org/doc1#char=14,24>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Kommersant"""^^xsd:string ;
+        nif:beginIndex "14"^^xsd:nonNegativeInteger ;
+        nif:endIndex "24"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Kommersant> .
+
+<https://example.org/doc1#char=25,32>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """reports"""^^xsd:string ;
+        nif:beginIndex "25"^^xsd:nonNegativeInteger ;
+        nif:endIndex "32"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Report> .
+
+<https://example.org/doc1#char=50,56>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """supply"""^^xsd:string ;
+        nif:beginIndex "50"^^xsd:nonNegativeInteger ;
+        nif:endIndex "56"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Supply_(economics)> .
+
+<https://example.org/doc1#char=61,67>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Greeks"""^^xsd:string ;
+        nif:beginIndex "61"^^xsd:nonNegativeInteger ;
+        nif:endIndex "67"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Greece> ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Greeks> .
+
+<https://example.org/doc1#char=80,84>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """rock"""^^xsd:string ;
+        nif:beginIndex "80"^^xsd:nonNegativeInteger ;
+        nif:endIndex "84"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Rock_(geology)> .
+
+<https://example.org/doc1#char=80,98>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """rock bottom prices"""^^xsd:string ;
+        nif:beginIndex "80"^^xsd:nonNegativeInteger ;
+        nif:endIndex "98"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Cost_reduction> .
+
+<https://example.org/doc1#char=92,98>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """prices"""^^xsd:string ;
+        nif:beginIndex "92"^^xsd:nonNegativeInteger ;
+        nif:endIndex "98"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Price> .
+
+<https://example.org/doc1#char=102,109>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Tsipras"""^^xsd:string ;
+        nif:beginIndex "102"^^xsd:nonNegativeInteger ;
+        nif:endIndex "109"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Alexis_Tsipras> .
+
+<https://example.org/doc1#char=110,118>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """prepares"""^^xsd:string ;
+        nif:beginIndex "110"^^xsd:nonNegativeInteger ;
+        nif:endIndex "118"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Preparation_(principle)> .
+
+<https://example.org/doc1#char=122,126>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """meet"""^^xsd:string ;
+        nif:beginIndex "122"^^xsd:nonNegativeInteger ;
+        nif:endIndex "126"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Meeting> .
+
+<https://example.org/doc1#char=131,138>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Russian"""^^xsd:string ;
+        nif:beginIndex "131"^^xsd:nonNegativeInteger ;
+        nif:endIndex "138"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Russia> ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Russians> .
+
+<https://example.org/doc1#char=131,148>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Russian President"""^^xsd:string ;
+        nif:beginIndex "131"^^xsd:nonNegativeInteger ;
+        nif:endIndex "148"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Vladimir_Putin> ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/President_of_Russia> .
+
+<https://example.org/doc1#char=139,148>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """President"""^^xsd:string ;
+        nif:beginIndex "139"^^xsd:nonNegativeInteger ;
+        nif:endIndex "148"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/President> .
+

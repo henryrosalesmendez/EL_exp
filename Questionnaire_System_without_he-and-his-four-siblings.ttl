@@ -155,15 +155,6 @@
         nif:endIndex "164"^^xsd:nonNegativeInteger ;
         itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Michael_Jackson> .
 
-<https://example.org/doc1#char=162,186>
-        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
-        nif:referenceContext <https://example.org/doc1#char=0,197> ;
-        nif:context <https://example.org/doc1#char=0,347> ;
-        nif:anchorOf """he and his four siblings"""^^xsd:string ;
-        nif:beginIndex "162"^^xsd:nonNegativeInteger ;
-        nif:endIndex "186"^^xsd:nonNegativeInteger ;
-        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/The_Jackson_5> .
-
 <https://example.org/doc1#char=173,177>
         a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
         nif:referenceContext <https://example.org/doc1#char=0,197> ;
@@ -317,6 +308,16 @@
         nif:beginIndex "122"^^xsd:nonNegativeInteger ;
         nif:endIndex "126"^^xsd:nonNegativeInteger ;
         itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Meeting> .
+
+<https://example.org/doc1#char=131,138>
+        a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;
+        nif:referenceContext <https://example.org/doc1#char=198,347> ;
+        nif:context <https://example.org/doc1#char=0,347> ;
+        nif:anchorOf """Russian"""^^xsd:string ;
+        nif:beginIndex "131"^^xsd:nonNegativeInteger ;
+        nif:endIndex "138"^^xsd:nonNegativeInteger ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Russia> ;
+        itsrdf:taIdentRef <https://en.wikipedia.org/wiki/Russians> .
 
 <https://example.org/doc1#char=131,148>
         a nif:String , nif:Context , nif:Phrase , nif:RFC5147String ;

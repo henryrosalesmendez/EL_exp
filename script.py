@@ -51,20 +51,20 @@ m = {}  # membership function
 m["https://example.org/doc1#char=21,34"] = 1 # Martin Bashir
 m["https://example.org/doc1#char=60,87"] = 0.97 # Living with Michael Jackson
 m["https://example.org/doc1#char=72,87"] = 0.75 # Michael Jackson
-m["https://example.org/doc1#char=93,104"] = 0.97 # King of Pop
-m["https://example.org/doc1#char=101,104"] = 0.35 # Pop
+m["https://example.org/doc1#char=93,104"] = 0.94 # King of Pop
+m["https://example.org/doc1#char=101,104"] = 0.33 # Pop
 m["https://example.org/doc1#char=119,122"] = 1 # Joe
-m["https://example.org/doc1#char=162,164"] = 0.57 # he
-m["https://example.org/doc1#char=162,186"] = 0.51 # he and his four siblings
-m["https://example.org/doc1#char=169,172"] = 0.4 # his
-m["https://example.org/doc1#char=0,7"] = 0.77 # Russian
-m["https://example.org/doc1#char=14,24"] = 1 # Kommersant
-m["https://example.org/doc1#char=38,44"] = 1 # Moscow
-m["https://example.org/doc1#char=61,67"] = 0.97 # Greeks
-m["https://example.org/doc1#char=73,76"] = 0.38 # gas
-m["https://example.org/doc1#char=102,109"] = 0.97 # Tsipras
-m["https://example.org/doc1#char=131,138"] = 0.58 # Russian
-m["https://example.org/doc1#char=131,148"] = 1 # Russian President
+m["https://example.org/doc1#char=162,164"] = 0.56 # he
+m["https://example.org/doc1#char=162,186"] = 0.50 # he and his four siblings
+m["https://example.org/doc1#char=169,172"] = 0.39 # his
+m["https://example.org/doc1#char=0,7"] = 0.61 # Russian
+m["https://example.org/doc1#char=14,24"] = 0.97 # Kommersant
+m["https://example.org/doc1#char=38,44"] = 0.94 # Moscow
+m["https://example.org/doc1#char=61,67"] = 0.94 # Greeks
+m["https://example.org/doc1#char=73,76"] = 0.36 # gas
+m["https://example.org/doc1#char=102,109"] = 0.92 # Tsipras
+m["https://example.org/doc1#char=131,138"] = 0.53 # Russian
+m["https://example.org/doc1#char=131,148"] = 0.97 # Russian President
 
 
 m2 = {}  # membership function 

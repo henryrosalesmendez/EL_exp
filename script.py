@@ -87,17 +87,39 @@ m2["https://example.org/doc1#char=131,138"] = 1 # Russian
 m2["https://example.org/doc1#char=131,148"] = 1 # Russian President
 
 
+m3 = {}  # membership function 
+m3["https://example.org/doc1#char=21,34"] = 1 # Martin Bashir
+m3["https://example.org/doc1#char=60,87"] = 1 # Living with Michael Jackson
+m3["https://example.org/doc1#char=72,87"] = 1 # Michael Jackson
+m3["https://example.org/doc1#char=93,104"] = 1 # King of Pop
+m3["https://example.org/doc1#char=101,104"] = 1 # Pop
+m3["https://example.org/doc1#char=119,122"] = 1 # Joe
+m3["https://example.org/doc1#char=162,164"] = 1 # he
+m3["https://example.org/doc1#char=162,186"] = 1 # he and his four siblings
+m3["https://example.org/doc1#char=169,172"] = 1 # his
+m3["https://example.org/doc1#char=0,7"] = 1 # Russian
+m3["https://example.org/doc1#char=14,24"] = 1 # Kommersant
+m3["https://example.org/doc1#char=38,44"] = 1 # Moscow
+m3["https://example.org/doc1#char=61,67"] = 1 # Greeks
+m3["https://example.org/doc1#char=73,76"] = 1 # gas
+m3["https://example.org/doc1#char=102,109"] = 1 # Tsipras
+m3["https://example.org/doc1#char=131,138"] = 1 # Russian
+m3["https://example.org/doc1#char=131,148"] = 1 # Russian President
+
 print("==============================\nNormal settings\n-------")
 print("Micro F1:",bmk.microF())
 print("Micro FEL:",bmk.microFEL(m))
 print("Micro FEL_0.8:",bmk.microFEL(m2))
+print("Micro FEL_1:",bmk.microFEL(m3))
 
 print("==============================\nExcluding Moscow\n-------")
 print("Micro F1:",bmk_no_Moscow.microF())
 print("Micro FEL:",bmk_no_Moscow.microFEL(m))
 print("Micro FEL_0.8:",bmk_no_Moscow.microFEL(m2))
+print("Micro FEL_1:",bmk_no_Moscow.microFEL(m3))
 
 print("==============================\nExcluding 'he and his four siblings'\n-------")
 print("Micro F1:",bmk_no_heAnd.microF())
 print("Micro FEL:",bmk_no_heAnd.microFEL(m))
 print("Micro FEL_0.8:",bmk_no_heAnd.microFEL(m2))
+print("Micro FEL_1:",bmk_no_heAnd.microFEL(m3))

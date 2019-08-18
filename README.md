@@ -1,6 +1,6 @@
-# Scripts of Entity Linking experiment
+# Scripts of Entity Linking experiments
 
-In this repository, I am sharing the scripts used to obtain the Tables and Charts of the paper "Not yet defined". This paper is in the process of being reviewed, I will soon publish more information here.
+In this repository, I am sharing the scripts used to obtain the Tables and Charts of the paper "Fine-Grained Evaluation for Entity Linking". This paper (available (here)[https://users.dcc.uchile.cl/~hrosales/papers/2019_EMNLP.pdf]) is going to be presented at (EMNLP'19)[https://www.emnlp-ijcnlp2019.org].
 
 The script detailed here use the nifwrapper package, so, you should install it before running the scripts. Some of these scripts generate the latex file corresponding to Tables and Charts, so, another requirement is the texlive-full in your computer.
 ```sh

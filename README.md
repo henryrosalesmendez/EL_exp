@@ -35,4 +35,4 @@ python3 TableAster_notIncludedYet.py
 ```
 
 ## Benchmark Dataset
-Here we store also our relabeled and reannotated datasets.
+We store also our relabeled and reannotated datasets, for the up-to-update versions see this [repo](https://github.com/henryrosalesmendez/categorized_EMNLP_datasets).

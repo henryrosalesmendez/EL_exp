@@ -1,6 +1,7 @@
+
 # Scripts of Entity Linking experiments
 
-In this repository, I am sharing the scripts used to obtain the Tables and Charts of the paper "Fine-Grained Evaluation for Entity Linking". This paper (available [here](http://aidanhogan.com/docs/fine_grained_entity_linking.pdf)) is going to be presented at [EMNLP'19](https://www.emnlp-ijcnlp2019.org).
+In this repository, I am sharing the scripts used to obtain the Tables and Charts of the paper "Fine-Grained Evaluation for Entity Linking". This paper (available [here](http://aidanhogan.com/docs/fine_grained_entity_linking.pdf)) is going to be presented at [EMNLP'19](https://www.emnlp-ijcnlp2019.org). Also, we include the script used in a journal extensio of this paper.
 
 The script detailed here use the nifwrapper package, so, you should install it before running the scripts. Some of these scripts generate the latex file corresponding to Tables and Charts, so, another requirement is the texlive-full in your computer.
 ```sh
@@ -36,3 +37,35 @@ python3 TableAster_notIncludedYet.py
 
 ## Benchmark Dataset
 We store also our relabeled and reannotated datasets, for the up-to-update versions see this [repo](https://github.com/henryrosalesmendez/categorized_EMNLP_datasets).
+
+
+
+
+# Journal Extension
+
+We gather the Tables 5, 6, 7 and 8 of our journal extension in the script ```Table_5_6_7_8_WSD_Coreference.py``` which generate the latex file to obtain them. 
+
+First, you should fulfill with the requirements
+
+```bash
+ 
+pip3 install xmltodict
+pip3 install nltk
+pip3 install pywsd
+pip3 install spacy==2.1.0
+python3 -m spacy download en
+pip3 install stanfordnlp
+pip3 install wrapperCoreference
+pip3 install wrapperWSD
+pip3 install nifwrapper
+
+wget http://nlp.stanford.edu/software/stanford-corenlp-full-2018-10-05.zip
+
+# run in inside python
+> import nltk
+> nltk.download()
+```
+Then, just run the script,
+```bash
+python3 Table_5_6_7_8_WSD_Coreference.py
+```

@@ -1,7 +1,7 @@
 
 # Scripts of Entity Linking experiments
 
-In this repository, I am sharing the scripts used to obtain the Tables and Charts of the paper "Fine-Grained Evaluation for Entity Linking". This paper (available [here](http://aidanhogan.com/docs/fine_grained_entity_linking.pdf)) is going to be presented at [EMNLP'19](https://www.emnlp-ijcnlp2019.org). Also, we include the script used in a journal extensio of this paper.
+In this repository, I am sharing the scripts used to obtain the Tables and Charts of the paper "Fine-Grained Evaluation for Entity Linking". This paper (available [here](http://aidanhogan.com/docs/fine_grained_entity_linking.pdf)) is going to be presented at [EMNLP'19](https://www.emnlp-ijcnlp2019.org). Also, we include the script used in a journal extension of this paper.
 
 The script detailed here use the nifwrapper package, so, you should install it before running the scripts. Some of these scripts generate the latex file corresponding to Tables and Charts, so, another requirement is the texlive-full in your computer.
 ```sh

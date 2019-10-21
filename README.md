@@ -19,7 +19,7 @@ texi2pdf Figure5-aster2.tex
 ```
 
 ## Tables
-Table 3 is generated with Table3-categories.py, which has an latex file as output.
+Table 3 is generated with Table3-categories.py, which has a latex file as output.
 ```sh
 python3 Table3-categories.py
 texi2pdf Table3-categories.tex
@@ -36,16 +36,16 @@ python3 TableAster_notIncludedYet.py
 ```
 
 ## Benchmark Dataset
-We store also our relabeled and reannotated datasets, for the up-to-update versions see this [repo](https://github.com/henryrosalesmendez/categorized_EMNLP_datasets).
+We also publish our relabeled and reannotated datasets, for the up-to-date version see this [repo](https://github.com/henryrosalesmendez/categorized_EMNLP_datasets).
 
 
 
 
 # Journal Extension
 
-We gather the Tables 5, 6, 7 and 8 of our journal extension in the script ```Table_5_6_7_8_WSD_Coreference.py``` which generate the latex file to obtain them. 
+We gather Tables 5, 6, 7 and 8 of our journal extension in the script ```Table_5_6_7_8_WSD_Coreference.py``` which generate the latex file to obtain them. 
 
-First, you should fulfill with the requirements
+First, you need to install the following packages:
 
 ```bash
  

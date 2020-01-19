@@ -5,7 +5,7 @@ In this repository, I am sharing the scripts used to obtain the Tables and Chart
 
 The script detailed here use the nifwrapper package, so, you should install it before running the scripts. Some of these scripts generate the latex file corresponding to Tables and Charts, so, another requirement is the texlive-full in your computer.
 ```sh
-pip3 install nifwrapper
+pip3 install nifwrapper==1.5.2
 sudo apt-get install texlive-full
 ```
 

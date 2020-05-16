@@ -18,7 +18,7 @@
 from nifwrapper import *
 import pickle
 
-Categories = ["el:Mnt-Full", "el:Mnt-Short", "el:Mnt-Extended", "el:Mnt-Alias", "el:Mnt-NumericTemporal", "el:Mnt-CommonForm", "el:Mnt-ProForm", "el:PoS-NounSingular", "el:PoS-NounPlural", "el:PoS-Adjective", "el:PoS-Verb", "el:PoS-Adverb", "el:Olp-None", "el:Olp-Maximal", "el:Olp-Intermediate", "el:Olp-Minimal", "el:Ref-Direct", "el:Ref-Anaphoric", "el:Ref-Metaphoric", "el:Ref-Metonymic", "el:Ref-Related", "el:Ref-Descriptive"] 
+Categories = ["el:Mnt-Full", "el:Mnt-Short", "el:Mnt-Extended", "el:Mnt-Alias", "el:Mnt-NumericTemporal", "el:Mnt-CommonForm", "el:Mnt-ProForm", "el:PoS-NounSingular", "el:PoS-NounPlural", "el:PoS-Adjective", "el:PoS-Verb", "el:PoS-Adverb", "el:Olp-None", "el:Olp-Maximal", "el:Olp-Intermediate", "el:Olp-Minimal", "el:Ref-Direct", "el:Ref-Anaphoric", "el:Ref-Metaphoric", "el:Ref-Metonymic", "el:Ref-Related", "el:Ref-Descriptive", "All"] 
 
 Datasets = {
     "KORE50":"Gold/2019_05_19_KORE50.ttl", 
@@ -80,7 +80,7 @@ for sys in Systems:
     Systemst[sys] = {"Unified": sys+"Unified.ttl"}
     
 Systems = Systemst
-
+'''
 '''
 LEN = {}
 H = {}
@@ -105,7 +105,8 @@ for c in Categories:
             
             
             ## -- 
-            wrp_gold.KeepOnlyTag(c)
+            if c!= "All":   ## added
+                wrp_gold.KeepOnlyTag(c)  ## modified
             
             #fn = "TTT_f/CAT_U_"+c+"_"+sys_k+"_"+gold_k+".ttl"
             #fn = fn.replace(":","_")
@@ -134,10 +135,10 @@ for c in Categories:
             
             recall_score = bmk.microF()
             H[c][gold_k][sys_k] = recall_score
-            
+'''         
 '''
-#pickle.dump([H,LEN], open('Table3-categories.pkl', 'wb') )
-[H,LEN] = pickle.load(open('Table3-categories.pkl', 'rb'))
+pickle.dump([H,LEN], open('Table3-categories.pkl', 'wb') )
+#[H,LEN] = pickle.load(open('Table3-categories.pkl', 'rb'))
 
 
 cat2label = {
@@ -162,7 +163,8 @@ cat2label = {
     "el:Ref-Metaphoric":"Metaphoric",
     "el:Ref-Metonymic":"Metonymic",
     "el:Ref-Related":"Related",
-    "el:Ref-Descriptive":"Descriptive"
+    "el:Ref-Descriptive":"Descriptive",
+    "All": "All"
 }
 
 

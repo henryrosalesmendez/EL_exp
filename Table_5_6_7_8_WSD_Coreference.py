@@ -265,7 +265,7 @@ for Systems_t in [(Systems_ALL, "ALL", "Table8.tex"),
                 recall_score = bmk.microF()
                 H[c][gold_k][sys_k] = recall_score
                 
-    [H_bl,LEN_1] = pickle.load(open('Table3-categories_baseline.pkl', 'rb'))
+    [H_bl,LEN_1] = pickle.load(open('Table3-categories.pkl', 'rb'))
 
     cat2label = {
         "el:Mnt-Full":"Full Mention",

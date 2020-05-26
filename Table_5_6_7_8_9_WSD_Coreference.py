@@ -28,6 +28,7 @@ Datasets = {
 
 # Systems Results, plus Coreference and WSD annotations
 #Name_t = "ALL"
+"""
 Systems_ALL = {
     "Babelfyr": {
         "VoxEL":"Systems_ALL/BABELFYr_VoxEL_ALL.ttl",
@@ -54,6 +55,34 @@ Systems_ALL = {
         "KORE50":"Systems_ALL/FREMENER_KORE50_ALL.ttl",
         "ACE04":"Systems_ALL/FREMENER_ACE_ALL.ttl"},
 }
+"""
+Systems_ALL_with_NWSDT = {   # correference neural and CoreNLPCoref, and wsd NLTK and NWSDT
+    "Babelfyr": {
+        "VoxEL":"Systems_ALL_with_NWSDT/BABELFYr_VoxEL_ALL.ttl",
+        "KORE50":"Systems_ALL_with_NWSDT/BABELFYr_KORE50_ALL.ttl",
+        "ACE04":"Systems_ALL_with_NWSDT/BABELFYr_ACE_ALL.ttl"},
+    "Babelfys": {
+        "VoxEL":"Systems_ALL_with_NWSDT/BABELFYs_VoxEL_ALL.ttl",
+        "KORE50":"Systems_ALL_with_NWSDT/BABELFYs_KORE50_ALL.ttl",
+        "ACE04":"Systems_ALL_with_NWSDT/BABELFYs_ACE_ALL.ttl"},
+    "TagME": {
+        "VoxEL":"Systems_ALL_with_NWSDT/TAGME_VoxEL_ALL.ttl",
+        "KORE50":"Systems_ALL_with_NWSDT/TAGME_KORE50_ALL.ttl",
+        "ACE04":"Systems_ALL_with_NWSDT/TAGME_ACE_ALL.ttl"},
+    "DBpSpotlight": {
+        "VoxEL":"Systems_ALL_with_NWSDT/DBpediaSpotlight_VoxEL_ALL.ttl",
+        "KORE50":"Systems_ALL_with_NWSDT/DBpediaSpotlight_KORE50_ALL.ttl",
+        "ACE04":"Systems_ALL_with_NWSDT/DBpediaSpotlight_ACE_ALL.ttl"},
+    "AIDA": {
+        "VoxEL":"Systems_ALL_with_NWSDT/AIDA_VoxEL_ALL.ttl",
+        "KORE50":"Systems_ALL_with_NWSDT/AIDA_KORE50_ALL.ttl",
+        "ACE04":"Systems_ALL_with_NWSDT/AIDA_ACE_ALL.ttl"},
+    "FREMENER": {
+        "VoxEL":"Systems_ALL_with_NWSDT/FREMENER_VoxEL_ALL.ttl",
+        "KORE50":"Systems_ALL_with_NWSDT/FREMENER_KORE50_ALL.ttl",
+        "ACE04":"Systems_ALL_with_NWSDT/FREMENER_ACE_ALL.ttl"},
+}
+
 
 
 
@@ -84,7 +113,35 @@ Systems_WSD = {
         "KORE50":"SystemsResults_with_WSD/FREMENER_KORE50_wsdNLTK.ttl",
         "ACE04":"SystemsResults_with_WSD/FREMENER_ACE_wsdNLTK.ttl"},
 }
-
+    
+    
+# Systems wsdNWSDT
+Systems_NWSDT = {
+    "Babelfyr": {
+        "VoxEL":"SystemsResults_with_WSD/BABELFYr_VoxEL_wsdNWSDT.ttl",
+        "KORE50":"SystemsResults_with_WSD/BABELFYr_KORE50_wsdNWSDT.ttl",
+        "ACE04":"SystemsResults_with_WSD/BABELFYr_ACE_wsdNWSDT.ttl"},
+    "Babelfys": {
+        "VoxEL":"SystemsResults_with_WSD/BABELFYs_VoxEL_wsdNWSDT.ttl",
+        "KORE50":"SystemsResults_with_WSD/BABELFYs_KORE50_wsdNWSDT.ttl",
+        "ACE04":"SystemsResults_with_WSD/BABELFYs_ACE_wsdNWSDT.ttl"},
+    "TagME": {
+        "VoxEL":"SystemsResults_with_WSD/TAGME_VoxEL_wsdNWSDT.ttl",
+        "KORE50":"SystemsResults_with_WSD/TAGME_KORE50_wsdNWSDT.ttl",
+        "ACE04":"SystemsResults_with_WSD/TAGME_ACE_wsdNWSDT.ttl"},
+    "DBpSpotlight": {
+        "VoxEL":"SystemsResults_with_WSD/DBpediaSpotlight_VoxEL_wsdNWSDT.ttl",
+        "KORE50":"SystemsResults_with_WSD/DBpediaSpotlight_KORE50_wsdNWSDT.ttl",
+        "ACE04":"SystemsResults_with_WSD/DBpediaSpotlight_ACE_wsdNWSDT.ttl"},
+    "AIDA": {
+        "VoxEL":"SystemsResults_with_WSD/AIDA_VoxEL_wsdNWSDT.ttl",
+        "KORE50":"SystemsResults_with_WSD/AIDA_KORE50_wsdNWSDT.ttl",
+        "ACE04":"SystemsResults_with_WSD/AIDA_ACE_wsdNWSDT.ttl"},
+    "FREMENER": {
+        "VoxEL":"SystemsResults_with_WSD/FREMENER_VoxEL_wsdNWSDT.ttl",
+        "KORE50":"SystemsResults_with_WSD/FREMENER_KORE50_wsdNWSDT.ttl",
+        "ACE04":"SystemsResults_with_WSD/FREMENER_ACE_wsdNWSDT.ttl"},
+}
 
 
 # Systems NeuralCoref 
@@ -195,10 +252,13 @@ fgoldUnified.close()
 
 Datasets = {"Unified":"goldUnified.ttl"}
 
-for Systems_t in [(Systems_ALL, "ALL", "Table8.tex"),
-                  (Systems_WSD, "WSD", "Table7.tex"),
-                  (Systems_NCR, "NCR", "Table6.tex"),
-                  (Systems_SCR, "SCR", "Table5.tex")]: 
+for Systems_t in [(Systems_ALL_with_NWSDT, "ALL with NWSDT", "Table_all_with_nwsdt.tex")]:
+
+    #[(Systems_ALL,  "ALL", "Table9.tex"),
+    #              (Systems_NWSDT,"NWSDT", "Table8.tex"),
+    #              (Systems_WSD,  "WSD", "Table7.tex"),
+    #              (Systems_NCR,  "NCR", "Table6.tex"),
+    #              (Systems_SCR,  "SCR", "Table5.tex")]: 
     
     Systems = Systems_t[0]
     Name_t = Systems_t[1]

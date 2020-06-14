@@ -1,13 +1,41 @@
 
 # Scripts of Entity Linking experiments
 
-In this repository, I am sharing the scripts used to obtain the Tables and Charts of the paper "Fine-Grained Evaluation for Entity Linking". This paper (available [here](http://aidanhogan.com/docs/fine_grained_entity_linking.pdf)) is going to be presented at [EMNLP'19](https://www.emnlp-ijcnlp2019.org). Also, we include the script used in a journal extension of this paper.
+In this repository, I am sharing the scripts used to obtain the Tables and Charts of the paper "Fine-Grained Evaluation for Entity Linking". This paper (available [here](http://aidanhogan.com/docs/fine_grained_entity_linking.pdf)) presented at [EMNLP'19](https://www.emnlp-ijcnlp2019.org). Also, we include the script used in a journal extension of this paper.
 
-The script detailed here use the nifwrapper package, so, you should install it before running the scripts. Some of these scripts generate the latex file corresponding to Tables and Charts, so, another requirement is the texlive-full in your computer.
+A considerable part of the code is available from the pypi repository, namely in the packages: `nifWrapper`, `wrapperCoreference` and `wrapperWSD`. Some of these scripts generate the latex file corresponding to Tables and Charts, so, another requirement is the `texlive-full` in your computer. First, install them and other dependencies, 
+
 ```sh
+# packages from authors
 pip3 install nifwrapper==1.5.2
+pip3 install wrapperCoreference
+pip3 install wrapperWSD
+
+# others
+pip3 install xmltodict
+pip3 install spacy
+pip3 install stanfordnlp
+pip3 install nltk
+pip3 install pywsd
+pip3 install spacy==2.1.0
+
+# latex interpreter
 sudo apt-get install texlive-full
+
+# dependencies
+python3 -m spacy download en
+wget http://nlp.stanford.edu/software/stanford-corenlp-full-2018-10-05.zip
 ```
+
+
+Then, run inside python3
+```
+> import nltk
+> nltk.download()
+```
+
+The following codes use NIF files with the annotation of Entity Linking systems, as well as their extensions with Coreference and WSD. Those scripts to create the NIF files are available in the folder `NIF_Generation`.
+
 
 ## Figures
 
@@ -45,25 +73,6 @@ We also publish our relabeled and reannotated datasets, for the up-to-date versi
 
 We gather Tables 5, 6, 7 and 8 of our journal extension in the script ```Table_5_6_7_8_WSD_Coreference.py``` which generate the latex file to obtain them. 
 
-First, you need to install the following packages:
-
-```bash
- 
-pip3 install xmltodict
-pip3 install nltk
-pip3 install pywsd
-pip3 install spacy==2.1.0
-python3 -m spacy download en
-pip3 install stanfordnlp
-pip3 install wrapperCoreference
-pip3 install wrapperWSD
-pip3 install nifwrapper
-
-wget http://nlp.stanford.edu/software/stanford-corenlp-full-2018-10-05.zip
-
-# run in inside python
-> import nltk
-> nltk.download()
 ```
 Then, just run the script,
 ```bash
